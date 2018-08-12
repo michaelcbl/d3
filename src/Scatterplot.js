@@ -38,36 +38,7 @@ class Scatterplot extends React.Component {
             } = this.props,
             { data } = this.state;
 
-        const xScale = d3
-            .scaleLinear()
-            .domain([0, d3.max(data, xData)])
-            .range([0, width]);
-
-        const yScale = d3
-            .scaleLinear()
-            .domain([0, d3.max(data, yData)])
-            .range([height, 0]);
-
-        return (
-            <g transform={`translate(${x}, ${y})`}>
-                <Heading y={-25}>{title}</Heading>
-                {data.map(d =>
-                    entry({
-                        x: xScale(xData(d)),
-                        y: yScale(yData(d)),
-                        d: d
-                    })
-                )}
-                <Axis
-                    scale={xScale}
-                    x={0}
-                    y={height}
-                    type="Bottom"
-                    label={xLabel}
-                />
-                <Axis scale={yScale} x={0} y={0} type="Left" label={yLabel} />
-            </g>
-        );
+        return null;
     }
 }
 

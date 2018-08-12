@@ -27,25 +27,7 @@ class Datapoint extends React.Component {
     render() {
         const { x, y, breed } = this.props;
 
-        return (
-            <DashboardContext.Consumer>
-                {({ highlightBreed, highlightedBreed }) => {
-                    const highlighted = highlightedBreed === breed;
-
-                    return (
-                        <Circle
-                            cx={x}
-                            cy={y}
-                            r={highlighted ? 9 : 5}
-                            highlighted={highlighted}
-                            onMouseOver={() => highlightBreed(breed)}
-                            onMouseOut={() => highlightBreed(null)}
-                            ref={this.circleRef}
-                        />
-                    );
-                }}
-            </DashboardContext.Consumer>
-        );
+        return null;
     }
 }
 
